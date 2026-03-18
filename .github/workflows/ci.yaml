@@ -97,6 +97,9 @@ jobs:
       - name: Install PyYAML
         run: pip install pyyaml
 
+      - name: Validate event metadata schema
+        run: python scripts/validate_events.py
+
       - name: Validate and generate events
         run: python scripts/generate_events_json.py
 
